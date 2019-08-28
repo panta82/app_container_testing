@@ -1,6 +1,6 @@
-const { BaseApp } = require("./container");
+const { MyApp } = require("./app");
 
-const app = new BaseApp();
+const app = new MyApp();
 
 app.initialize().catch(err => {
   console.error(err);
