@@ -1,16 +1,15 @@
 /**
- * @param {MyApp} app
+ * @param {MyApp2} app
  * @constructor
  */
 function ServiceB(app) {
-  console.log("B created");
-  console.log("B is given: " + app.getName());
+  console.log(`${app.getName()} B created`);
 
   this.initialize = () => {
-    console.log("B initialized");
+    console.log(`${app.getName()} B initialized`);
 
     setInterval(() => {
-      console.log("B tick");
+      console.log(`${app.getName()} B tick`);
       app.serviceA.performAction();
     }, 1000);
   };

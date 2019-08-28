@@ -1,12 +1,16 @@
-function ServiceA({}) {
-  console.log("A created");
+/**
+ * @param {MyApp1}
+ * @constructor
+ */
+function ServiceA({ getName }) {
+  console.log(`${getName()} A created`);
 
   this.initialize = () => {
-    console.log("A initialized");
+    console.log(`${getName()} A initialized`);
   };
 
   this.performAction = () => {
-    console.log("A performs action");
+    console.log(`${getName()} A performs action`);
   };
 }
 

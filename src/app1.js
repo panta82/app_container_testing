@@ -1,6 +1,6 @@
 const util = require("util");
 
-function BaseApp(serviceInitializer) {
+function BaseApp1(serviceInitializer) {
   this.services = [];
 
   this._registerService = Ctr => {
@@ -29,11 +29,11 @@ function BaseApp(serviceInitializer) {
 }
 
 /**
- * @extends BaseApp
+ * @extends BaseApp1
  * @constructor
  */
-function MyApp() {
-  BaseApp.call(this, () => {
+function MyApp1() {
+  BaseApp1.call(this, () => {
     /** @type {ServiceA} */
     this.serviceA = this._registerService(require("./service_a").ServiceA);
 
@@ -41,9 +41,9 @@ function MyApp() {
     this.serviceB = this._registerService(require("./service_b").ServiceB);
   });
 }
-util.inherits(MyApp, BaseApp);
+util.inherits(MyApp1, BaseApp1);
 
 module.exports = {
-  BaseApp,
-  MyApp
+  BaseApp1,
+  MyApp1
 };
